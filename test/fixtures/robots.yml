@@ -1,0 +1,31 @@
+# == Schema Information
+#
+# Table name: robots
+#
+#  id                   :uuid             not null, primary key
+#  name_first           :string
+#  name_last            :string
+#  creation_date        :date
+#  job_id               :uuid
+#  robot_model_id       :uuid
+#  origin_id            :uuid
+#  location_id          :uuid
+#  created_at           :datetime         not null
+#  updated_at           :datetime         not null
+#  picture_file_name    :string
+#  picture_content_type :string
+#  picture_file_size    :integer
+#  picture_updated_at   :datetime
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name_first: MyString
+  name_last: MyString
+  data_of_build: 2015-09-01
+
+two:
+  name_first: MyString
+  name_last: MyString
+  data_of_build: 2015-09-01

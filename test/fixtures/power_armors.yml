@@ -1,0 +1,34 @@
+# == Schema Information
+#
+# Table name: power_armors
+#
+#  id         :uuid             not null, primary key
+#  name       :string
+#  durability :integer
+#  quality    :integer
+#  armor      :integer
+#  type       :string
+#  rarity     :string
+#  owner_id   :uuid
+#  owner_type :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  durability: 
+  quality: 
+  armor: 
+  type: 
+  rarity: MyString
+
+two:
+  name: MyString
+  durability: 
+  quality: 
+  armor: 
+  type: 
+  rarity: MyString

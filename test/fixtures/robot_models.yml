@@ -1,0 +1,20 @@
+# == Schema Information
+#
+# Table name: robot_models
+#
+#  id         :uuid             not null, primary key
+#  name       :string
+#  code       :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  code: MyString
+
+two:
+  name: MyString
+  code: MyString

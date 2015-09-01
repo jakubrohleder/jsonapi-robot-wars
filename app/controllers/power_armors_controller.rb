@@ -1,0 +1,2 @@
+class PowerArmorsController < ApplicationController
+end

@@ -1,0 +1,5 @@
+dbreload () {
+  bin/rake db:drop db:create
+  bin/rake db:migrate
+  bin/rake db:seed
+}

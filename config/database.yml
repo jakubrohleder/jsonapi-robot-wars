@@ -1,0 +1,14 @@
+# SQLite version 3.x
+#   gem install sqlite3
+#
+#   Ensure the SQLite 3 gem is defined in your Gemfile
+#   gem 'sqlite3'
+#
+#
+development:
+  adapter: postgresql
+  encoding: utf8
+  database: angular_jsonapi_back
+  pool: 5
+  username: angular_jsonapi
+  password: a
