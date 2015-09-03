@@ -10,6 +10,7 @@ benchmark = Benchmark.measure do
       FactoryGirl.create :spaceship_model
     end
 
+    FactoryGirl.create :robot, id: '10000000-0000-4000-8000-00000000000', name_first: 'Bender Bending', name_last: 'Rodriguez'
     30.times do
       FactoryGirl.create :robot
     end
