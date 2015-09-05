@@ -18,6 +18,9 @@ class Spaceship < ActiveRecord::Base
   belongs_to :pilot, polymorphic: true
 
   belongs_to :spaceship_model
-  belongs_to :robot
-  belongs_to :location
+  belongs_to :location, inverse_of: :entity
+
+  validates :name, presence: true
+  validates :durability, presence: true
+  validates :quality, presence: true
 end

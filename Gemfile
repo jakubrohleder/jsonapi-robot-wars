@@ -22,4 +22,6 @@ gem 'rails_12factor', group: :production
 
 gem 'annotate', group: :development
 
+gem 'rack-cors', :require => 'rack/cors'
+
 ruby "2.2.2"

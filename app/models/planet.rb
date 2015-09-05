@@ -15,6 +15,7 @@
 class Planet < ActiveRecord::Base
   has_many :locations
 
+  validates :name, presence: true
   validates :cords_x, presence: true
   validates :cords_y, presence: true
   validates :cords_z, presence: true

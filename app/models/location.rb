@@ -12,7 +12,7 @@
 
 class Location < ActiveRecord::Base
   belongs_to :planet
-  has_one :robot
+  has_one :entity
 
   validates :cords_x, presence: true
   validates :cords_y, presence: true

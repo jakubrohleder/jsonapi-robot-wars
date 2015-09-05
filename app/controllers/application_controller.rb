@@ -1,3 +1,3 @@
-class ApplicationController < ActionController::API
+class ApplicationController < JSONAPI::ResourceController
 
 end

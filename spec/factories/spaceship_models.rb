@@ -19,5 +19,6 @@ FactoryGirl.define do
     type {['Cruiser', 'Wasp', 'Destroyer', 'Cargo'].sample}
 
     cargo {Faker::Number.between(1234, 5551)}
+    speed {Faker::Number.between(100, 1000)}
   end
 end

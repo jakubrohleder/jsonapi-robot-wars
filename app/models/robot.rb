@@ -19,10 +19,11 @@
 #
 
 class Robot < ActiveRecord::Base
-  has_many :items, as: :owner
+  has_many :laser_guns, as: :owner
+  has_many :power_armors, as: :owner
   has_many :spaceships, as: :pilot
 
-  belongs_to :location
+  belongs_to :location, inverse_of: :entity
   belongs_to :origin, class_name: 'Location'
   belongs_to :robot_model
   belongs_to :job
