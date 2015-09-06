@@ -2,7 +2,7 @@
 #
 # Table name: locations
 #
-#  id         :integer          not null, primary key
+#  id         :uuid             not null, primary key
 #  planet_id  :uuid
 #  cords_x    :string
 #  cords_y    :string

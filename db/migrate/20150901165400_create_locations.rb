@@ -1,6 +1,6 @@
 class CreateLocations < ActiveRecord::Migration
   def change
-    create_table :locations do |t|
+    create_table :locations, id: :uuid do |t|
       t.uuid :planet_id
       t.string :cords_x
       t.string :cords_y

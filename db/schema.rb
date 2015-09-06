@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20150901175301) do
   enable_extension "plpgsql"
   enable_extension "uuid-ossp"
 
-  create_table "jobs", force: :cascade do |t|
+  create_table "jobs", id: :uuid, default: "uuid_generate_v4()", force: :cascade do |t|
     t.string   "name"
     t.integer  "salary"
     t.datetime "created_at", null: false
@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 20150901175301) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "locations", force: :cascade do |t|
+  create_table "locations", id: :uuid, default: "uuid_generate_v4()", force: :cascade do |t|
     t.uuid     "planet_id"
     t.string   "cords_x"
     t.string   "cords_y"

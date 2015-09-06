@@ -2,7 +2,7 @@
 #
 # Table name: jobs
 #
-#  id         :integer          not null, primary key
+#  id         :uuid             not null, primary key
 #  name       :string
 #  salary     :integer
 #  created_at :datetime         not null
