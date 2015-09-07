@@ -7,8 +7,6 @@ class CreateRobots < ActiveRecord::Migration
 
       t.uuid :job_id
       t.uuid :robot_model_id
-      t.uuid :origin_id
-      t.uuid :location_id
 
       t.timestamps null: false
     end

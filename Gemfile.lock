@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/cerebris/jsonapi-resources
+  revision: b41a4be57113ad31bd82aedd5573e1da389d524f
+  specs:
+    jsonapi-resources (0.5.9)
+      rails (>= 4.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -57,8 +64,6 @@ GEM
       activesupport (>= 4.1.0)
     i18n (0.7.0)
     json (1.8.3)
-    jsonapi-resources (0.5.7)
-      rails (>= 4.0)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.3)
@@ -141,7 +146,7 @@ DEPENDENCIES
   annotate
   factory_girl_rails
   faker
-  jsonapi-resources
+  jsonapi-resources!
   paperclip
   pg
   rack-cors

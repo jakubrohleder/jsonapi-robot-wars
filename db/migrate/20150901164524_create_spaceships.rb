@@ -9,7 +9,6 @@ class CreateSpaceships < ActiveRecord::Migration
       t.string :pilot_type
 
       t.uuid :spaceship_model_id
-      t.uuid :location_id
 
       t.timestamps null: false
     end

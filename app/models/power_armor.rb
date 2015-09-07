@@ -18,6 +18,8 @@
 class PowerArmor < ActiveRecord::Base
   belongs_to :owner, polymorphic: true
 
+  self.inheritance_column = :_type_disabled
+
   validates :name, presence: true
   validates :durability, presence: true
   validates :quality, presence: true

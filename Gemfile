@@ -6,7 +6,7 @@ gem 'rails', '4.2.4'
 gem 'rails-api'
 
 gem 'spring', group: :development
-gem 'jsonapi-resources'
+gem 'jsonapi-resources', git: 'https://github.com/cerebris/jsonapi-resources'
 gem 'factory_girl_rails'
 
 group :test, :development do

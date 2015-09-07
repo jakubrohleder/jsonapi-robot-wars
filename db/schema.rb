@@ -41,8 +41,10 @@ ActiveRecord::Schema.define(version: 20150901175301) do
     t.uuid     "planet_id"
     t.string   "cords_x"
     t.string   "cords_y"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.uuid     "entity_id"
+    t.string   "entity_type"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "planets", id: :uuid, default: "uuid_generate_v4()", force: :cascade do |t|
@@ -81,8 +83,6 @@ ActiveRecord::Schema.define(version: 20150901175301) do
     t.date     "creation_date"
     t.uuid     "job_id"
     t.uuid     "robot_model_id"
-    t.uuid     "origin_id"
-    t.uuid     "location_id"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
     t.string   "picture_file_name"
@@ -108,7 +108,6 @@ ActiveRecord::Schema.define(version: 20150901175301) do
     t.uuid     "pilot_id"
     t.string   "pilot_type"
     t.uuid     "spaceship_model_id"
-    t.uuid     "location_id"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
   end

@@ -9,7 +9,6 @@
 #  pilot_id           :uuid
 #  pilot_type         :string
 #  spaceship_model_id :uuid
-#  location_id        :uuid
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
 #
@@ -20,9 +19,10 @@ FactoryGirl.define do
     durability {Faker::Number.between(1, 100)}
     quality {Faker::Number.between(1, 100)}
 
-    location
     spaceship_model {SpaceshipModel.all.sample}
 
     pilot {Robot.all.sample}
+
+    after(:create) {|entity| FactoryGirl.create :location, entity: entity}
   end
 end

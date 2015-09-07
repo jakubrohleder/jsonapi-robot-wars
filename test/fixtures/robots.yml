@@ -8,8 +8,6 @@
 #  creation_date        :date
 #  job_id               :uuid
 #  robot_model_id       :uuid
-#  origin_id            :uuid
-#  location_id          :uuid
 #  created_at           :datetime         not null
 #  updated_at           :datetime         not null
 #  picture_file_name    :string

@@ -9,7 +9,6 @@
 #  pilot_id           :uuid
 #  pilot_type         :string
 #  spaceship_model_id :uuid
-#  location_id        :uuid
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
 #
