@@ -21,7 +21,7 @@ class Robot < ActiveRecord::Base
   has_many :power_armors, as: :owner
   has_many :spaceships, as: :pilot
 
-  has_one :location, as: :entity
+  has_one :location, as: :entity, dependent: :destroy
 
   belongs_to :robot_model
   belongs_to :job

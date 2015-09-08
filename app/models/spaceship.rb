@@ -17,9 +17,16 @@ class Spaceship < ActiveRecord::Base
   belongs_to :pilot, polymorphic: true
   belongs_to :spaceship_model
 
-  has_one :location, as: :entity
+  has_one :location, as: :entity, dependent: :destroy
 
   validates :name, presence: true
   validates :durability, presence: true
   validates :quality, presence: true
+
+  def location_id
+    self.location.id unless self.location.nil?
+  end
+
+  def location_id=(location_id)
+  end
 end

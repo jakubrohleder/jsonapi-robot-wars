@@ -13,7 +13,7 @@
 #
 
 class Planet < ActiveRecord::Base
-  has_many :locations
+  has_many :locations, dependent: :destroy
 
   validates :name, presence: true
   validates :cords_x, presence: true
