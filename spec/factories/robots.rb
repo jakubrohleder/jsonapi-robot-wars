@@ -18,12 +18,12 @@
 
 FactoryGirl.define do
   factory :robot do
-    name_first {Faker::Name.first_name}
-    name_last  {Faker::Name.last_name}
-    creation_date {Faker::Date.between 2214124.days.since, 2252391.days.since}
-    job {Job.all.sample}
-    robot_model {RobotModel.all.sample}
+    name_first { Faker::Name.first_name }
+    name_last  { Faker::Name.last_name }
+    creation_date { Faker::Date.between 221_412_4.days.since, 225_239_1.days.since }
+    job { Job.all.sample }
+    robot_model { RobotModel.all.sample }
 
-    after(:create) {|entity| FactoryGirl.create :location, entity: entity}
+    before(:create) { |entity| entity.location = FactoryGirl.create :location, entity: entity }
   end
 end

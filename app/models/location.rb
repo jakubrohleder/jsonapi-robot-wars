@@ -11,6 +11,10 @@
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #
+# Indexes
+#
+#  index_locations_on_entity_id_and_entity_type  (entity_id,entity_type) UNIQUE
+#
 
 class Location < ActiveRecord::Base
   belongs_to :planet
@@ -21,5 +25,5 @@ class Location < ActiveRecord::Base
 
   validates :planet, presence: true
   validates :entity, presence: true
-  validates :entity_id, uniqueness: true
+  validates :entity_id, uniqueness: { scope: :entity_type }
 end

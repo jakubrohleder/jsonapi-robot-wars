@@ -15,14 +15,12 @@
 
 FactoryGirl.define do
   factory :spaceship do
-    name {'Spaceship ' + Faker::Commerce.product_name}
-    durability {Faker::Number.between(1, 100)}
-    quality {Faker::Number.between(1, 100)}
+    name { 'Spaceship ' + Faker::Commerce.product_name }
+    durability { Faker::Number.between(1, 100) }
+    quality { Faker::Number.between(1, 100) }
+    spaceship_model { SpaceshipModel.all.sample }
+    pilot { Robot.all.sample }
 
-    spaceship_model {SpaceshipModel.all.sample}
-
-    pilot {Robot.all.sample}
-
-    after(:create) {|entity| FactoryGirl.create :location, entity: entity}
+    before(:create) { |entity| entity.location = FactoryGirl.create :location, entity: entity }
   end
 end

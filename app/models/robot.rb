@@ -42,12 +42,17 @@ class Robot < ActiveRecord::Base
     },
     default_url: ->(av) { "http://robohash.org/#{av.instance.id}" }
 
-  delegate :url, to: :picture, prefix: true
-  delegate :id, to: :location, prefix: true
-
   def picture_url=(_)
   end
 
+  def picture_url
+    picture.url unless picture.nil?
+  end
+
   def location_id=(_)
+  end
+
+  def location_id
+    location.id unless location.nil?
   end
 end

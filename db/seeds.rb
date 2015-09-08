@@ -2,7 +2,6 @@ require 'factory_girl'
 
 benchmark = Benchmark.measure do
   ActiveRecord::Base.transaction do
-    robots = []
     10.times do
       FactoryGirl.create :planet
       FactoryGirl.create :job
@@ -23,7 +22,6 @@ benchmark = Benchmark.measure do
     10.times do
       FactoryGirl.create :spaceship
     end
-
   end
 end
 

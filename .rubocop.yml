@@ -6,3 +6,10 @@ Documentation:
 
 Style/AlignParameters:
   Enabled: false
+
+Metrics/LineLength:
+  Enabled: false
+
+Style/FileName:
+  Exclude:
+    - '**/Gemfile'

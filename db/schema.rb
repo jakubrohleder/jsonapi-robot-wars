@@ -47,6 +47,8 @@ ActiveRecord::Schema.define(version: 20150901175301) do
     t.datetime "updated_at",  null: false
   end
 
+  add_index "locations", ["entity_id", "entity_type"], name: "index_locations_on_entity_id_and_entity_type", unique: true, using: :btree
+
   create_table "planets", id: :uuid, default: "uuid_generate_v4()", force: :cascade do |t|
     t.string   "name"
     t.string   "cords_x"

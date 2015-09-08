@@ -10,5 +10,7 @@ class CreateLocations < ActiveRecord::Migration
 
       t.timestamps null: false
     end
+
+    add_index :locations, [:entity_id, :entity_type], unique: true
   end
 end
