@@ -30,25 +30,24 @@ class Robot < ActiveRecord::Base
   validates :name_last, presence: true
   validates :creation_date, presence: true
 
+  validates :location, presence: true
+  validates :job, presence: true
+  validates :robot_model, presence: true
+
   has_attached_file :picture,
-    :styles => {
-      :original => '350x350>',
-      :medium => '200x200>',
-      :thumb => '120x120>'
+    styles: {
+      original: '350x350>',
+      medium: '200x200>',
+      thumb: '120x120>'
     },
-    :default_url => lambda { |av| "http://robohash.org/#{av.instance.id}" }
+    default_url: ->(av) { "http://robohash.org/#{av.instance.id}" }
 
-  def picture_url
-    self.picture.url
+  delegate :url, to: :picture, prefix: true
+  delegate :id, to: :location, prefix: true
+
+  def picture_url=(_)
   end
 
-  def picture_url=(picture_url)
-  end
-
-  def location_id
-    self.location.id unless self.location.nil?
-  end
-
-  def location_id=(location_id)
+  def location_id=(_)
   end
 end

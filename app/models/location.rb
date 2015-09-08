@@ -18,4 +18,8 @@ class Location < ActiveRecord::Base
 
   validates :cords_x, presence: true
   validates :cords_y, presence: true
+
+  validates :planet, presence: true
+  validates :entity, presence: true
+  validates :entity_id, uniqueness: true
 end
