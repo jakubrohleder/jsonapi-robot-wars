@@ -1,5 +1,5 @@
 class RobotResource < JSONAPI::Resource
-  attributes :name_first,  :name_last,  :creation_date, :picture_url
+  attributes :name_first, :name_last, :creation_date, :picture_url
 
   has_many :laser_guns
   has_many :power_armors
@@ -8,5 +8,4 @@ class RobotResource < JSONAPI::Resource
   has_one :location
   has_one :robot_model
   has_one :job
-
 end
