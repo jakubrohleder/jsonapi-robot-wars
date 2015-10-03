@@ -1,3 +1,5 @@
+require_relative '../../app/operation_processors/chewbacca_active_record_operation_processor.rb'
+
 JSONAPI.configure do |config|
   #:underscored_key, :camelized_key, :dasherized_key, or custom
   config.json_key_format = :camelized_key
@@ -6,7 +8,7 @@ JSONAPI.configure do |config|
   config.route_format = :camelized_route
 
   #:basic, :active_record, or custom
-  config.operations_processor = :active_record
+  config.operations_processor = :chewbacca_active_record
 
   #:integer, :uuid, :string, or custom (provide a proc)
   config.resource_key_type = :uuid
