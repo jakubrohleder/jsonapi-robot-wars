@@ -1,5 +1,7 @@
 class RobotModelResource < JSONAPI::Resource
+  attributes :name, :code
+
   has_many :robots
 
-  attributes :name, :code
+  filters :name, :code
 end

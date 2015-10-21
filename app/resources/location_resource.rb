@@ -3,4 +3,6 @@ class LocationResource < JSONAPI::Resource
 
   has_one :planet
   has_one :entity, polymorphic: true
+
+  filters :cords_x, :cords_y
 end

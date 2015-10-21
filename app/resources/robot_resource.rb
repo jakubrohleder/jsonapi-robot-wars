@@ -8,4 +8,6 @@ class RobotResource < JSONAPI::Resource
   has_one :location
   has_one :robot_model
   has_one :job
+
+  filters :name_first, :name_last, :creation_date, :picture_url
 end
