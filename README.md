@@ -1,3 +1,5 @@
+# ARCHIVED and no longer maintained
+
 # JsonAPI RobotWars
 [![Code Climate](https://codeclimate.com/github/jakubrohleder/jsonapi-robot-wars/badges/gpa.svg)](https://codeclimate.com/github/jakubrohleder/jsonapi-robot-wars)
 
